@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M6_GO_v2", "M6_GO_v2\M6_GO_v2.csproj", "{DA2E5587-3B32-4EE6-874E-EE510F084528}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_M6_GO", "API_M6_GO\API_M6_GO.csproj", "{0BAA7667-DE1F-4212-BF77-6DA895B89AB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA2E5587-3B32-4EE6-874E-EE510F084528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA2E5587-3B32-4EE6-874E-EE510F084528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA2E5587-3B32-4EE6-874E-EE510F084528}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DA2E5587-3B32-4EE6-874E-EE510F084528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA2E5587-3B32-4EE6-874E-EE510F084528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA2E5587-3B32-4EE6-874E-EE510F084528}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0BAA7667-DE1F-4212-BF77-6DA895B89AB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BAA7667-DE1F-4212-BF77-6DA895B89AB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BAA7667-DE1F-4212-BF77-6DA895B89AB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BAA7667-DE1F-4212-BF77-6DA895B89AB9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4BDA60E-A15D-4BF2-806C-9AC278341CEB}
+	EndGlobalSection
+EndGlobal

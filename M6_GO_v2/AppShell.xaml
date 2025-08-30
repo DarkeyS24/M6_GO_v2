@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="M6_GO_v2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:M6_GO_v2"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False"
+    Title="M6_GO_v2">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="LoginPage" />
+    
+    <ShellContent
+        Title="Idoso"
+        ContentTemplate="{DataTemplate local:IdosoPage}"
+        Route="IdosoPage" />
+    
+    <ShellContent
+        Title="Cuidador"
+        ContentTemplate="{DataTemplate local:CuidadorPage}"
+        Route="CuidadorPage" />
+    
+    <ShellContent
+        Title="Novo Atendimento"
+        ContentTemplate="{DataTemplate local:NovoAtendimentoPage}"
+        Route="NovoAtendimentoPage" />
+
+</Shell>

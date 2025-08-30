@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="M6_GO_v2.LoginPage"
+             Title="LoginPage">
+    <ScrollView>
+        <Grid RowDefinitions="*,*,*">
+            <StackLayout x:Name="loginLayout" IsVisible="true">
+                <StackLayout>
+                    <Image Source="dotnet_bot.png" WidthRequest="800"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" HorizontalOptions="Start" Margin="150,0,150,0">
+                    <Label Text="Usuário" FontSize="24" FontAttributes="Bold"/>
+                    <Frame Padding="5" WidthRequest="500">
+                        <Entry x:Name="usuario" FontSize="24"/>
+                    </Frame>
+                    <Label Margin="0,30,0,0" Text="Usuário" FontSize="24" FontAttributes="Bold"/>
+                    <Frame Padding="5" WidthRequest="500">
+                        <Entry x:Name="senha" IsPassword="True" FontSize="24"/>
+                    </Frame>
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox Color="#2B0B98" x:Name="check"/>
+                        <Label Text="Manter Conectado" FontSize="20" FontAttributes="Bold" VerticalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Grid.Row="2">
+                    <Button Clicked="OnClickToLogin" Margin="0,100,0,0" Text="Login" HorizontalOptions="Center" WidthRequest="150" FontAttributes="Bold" FontSize="24" BackgroundColor="White" BorderColor="#2B0B98" BorderWidth="2" TextColor="#2B0B98"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout x:Name="pinLayout" IsVisible="false">
+                <Image Grid.Row="0" Source="dotnet_bot.png" WidthRequest="800"/>
+                <StackLayout Grid.Row="1">
+                    <Label Text="Digite o PIN que aparece na sua tela" FontSize="42" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                    <StackLayout Margin="0,100,0,0">
+                        <Frame BorderColor="#2B0B98" HorizontalOptions="Center" WidthRequest="300">
+                            <Label x:Name="labelPin" HorizontalOptions="Center" Text="888" TextColor="#2B0B98" FontAttributes="Bold" FontSize="36"/>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout Margin="0,75,0,0">
+                        <Frame BorderColor="#2B0B98" Padding="5" HeightRequest="70" HorizontalOptions="Center" WidthRequest="300">
+                            <Entry HorizontalTextAlignment="Center" x:Name="entryPin" Keyboard="Numeric" TextColor="Black" FontAttributes="Bold" FontSize="36"/>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+                
+                <StackLayout Orientation="Horizontal" Spacing="50" HorizontalOptions="Center" Grid.Row="2">
+                    <Button Clicked="OnCancelToLogin" Text="Cancelar" Margin="0,50,0,0" WidthRequest="200" FontAttributes="Bold" FontSize="24" BackgroundColor="White" BorderColor="#2B0B98" BorderWidth="2" TextColor="#2B0B98"/>
+                    <Button Clicked="OnConfirmToLogin" Text="Confirmar" Margin="0,50,0,0" WidthRequest="200" FontAttributes="Bold" FontSize="24" BackgroundColor="White" BorderColor="#2B0B98" BorderWidth="2" TextColor="#2B0B98"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

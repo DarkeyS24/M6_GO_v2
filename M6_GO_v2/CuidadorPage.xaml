@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="M6_GO_v2.CuidadorPage"
+             Title="CuidadorPage">
+    <ScrollView>
+        <Grid RowDefinitions="200,*,*,*">
+            <StackLayout Grid.Row="0">
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="labelNome" Text="Olá, Gustavo" FontSize="24" FontAttributes="Bold" Margin="30,10,10,0"/>
+                    <Image Source="dotnet_bot.png" HeightRequest="50" HorizontalOptions="EndAndExpand" Margin="10">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTapToLogOut"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+
+                <Label Margin="30,0,0,0" FontAttributes="Bold" Text="Meus Atendimentos" FontSize="36"/>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="Start" Margin="30,60,0,0">
+                    <Label FontAttributes="Bold" Text="Paciente" FontSize="24"/>
+                    <Frame Padding="5">
+                        <Picker FontSize="24" WidthRequest="400"/>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+
+                <Border Padding="10" HorizontalOptions="Center" Grid.Row="1" WidthRequest="700" VerticalOptions="Center" StrokeThickness="2" StrokeShape="RoundRectangle 10" Stroke="Black">
+                    <StackLayout Orientation="Horizontal">
+                    <Button WidthRequest="150" FontAttributes="Bold" FontSize="20" Text="Anterior" Grid.Column="0" HorizontalOptions="StartAndExpand"/>
+                    <Label Text="Agosto 2025" FontSize="36" FontAttributes="Bold" Grid.Column="1" HorizontalOptions="CenterAndExpand"/>
+                    <Button Text="Proximo" FontAttributes="Bold" FontSize="20" WidthRequest="150" Grid.Column="2" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                </Border>
+
+            <Grid x:Name="Calendar">
+                
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,6 @@
+@API_M6_GO_HostAddress = http://localhost:5092
+
+GET {{API_M6_GO_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
