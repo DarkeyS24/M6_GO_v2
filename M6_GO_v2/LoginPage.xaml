@@ -15,7 +15,7 @@
                     <Frame Padding="5" WidthRequest="500">
                         <Entry x:Name="usuario" FontSize="24"/>
                     </Frame>
-                    <Label Margin="0,30,0,0" Text="Usuário" FontSize="24" FontAttributes="Bold"/>
+                    <Label Margin="0,30,0,0" Text="Senha" FontSize="24" FontAttributes="Bold"/>
                     <Frame Padding="5" WidthRequest="500">
                         <Entry x:Name="senha" IsPassword="True" FontSize="24"/>
                     </Frame>
@@ -28,6 +28,8 @@
                 <StackLayout Grid.Row="2">
                     <Button Clicked="OnClickToLogin" Margin="0,100,0,0" Text="Login" HorizontalOptions="Center" WidthRequest="150" FontAttributes="Bold" FontSize="24" BackgroundColor="White" BorderColor="#2B0B98" BorderWidth="2" TextColor="#2B0B98"/>
                 </StackLayout>
+
+                <ActivityIndicator Grid.Row="2" IsVisible="False" IsRunning="False" x:Name="indicator" Margin="50"/>
             </StackLayout>
 
             <StackLayout x:Name="pinLayout" IsVisible="false">

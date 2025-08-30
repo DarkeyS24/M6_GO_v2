@@ -4,7 +4,7 @@
              x:Class="M6_GO_v2.CuidadorPage"
              Title="CuidadorPage">
     <ScrollView>
-        <Grid RowDefinitions="200,*,*,*">
+        <Grid RowDefinitions="280,*,*,*">
             <StackLayout Grid.Row="0">
                 <StackLayout Orientation="Horizontal">
                     <Label x:Name="labelNome" Text="Olá, Gustavo" FontSize="24" FontAttributes="Bold" Margin="30,10,10,0"/>
@@ -19,23 +19,50 @@
 
                 <StackLayout Orientation="Vertical" HorizontalOptions="Start" Margin="30,60,0,0">
                     <Label FontAttributes="Bold" Text="Paciente" FontSize="24"/>
-                    <Frame Padding="5">
-                        <Picker FontSize="24" WidthRequest="400"/>
-                    </Frame>
+                    <Border Stroke="#2B0B98" StrokeThickness="1" StrokeShape="RoundRectangle 10" Padding="5">
+                        <Picker SelectedIndexChanged="OnItemChanged" IsEnabled="True" FontSize="24" x:Name="idosoPicker" WidthRequest="400"/>
+                    </Border>
                 </StackLayout>
+                
             </StackLayout>
 
-                <Border Padding="10" HorizontalOptions="Center" Grid.Row="1" WidthRequest="700" VerticalOptions="Center" StrokeThickness="2" StrokeShape="RoundRectangle 10" Stroke="Black">
+            <Frame Padding="10" Margin="0,50,0,0" HorizontalOptions="Center" Grid.Row="1" WidthRequest="700" VerticalOptions="Start" BorderColor="#2B0B98">
                     <StackLayout Orientation="Horizontal">
-                    <Button WidthRequest="150" FontAttributes="Bold" FontSize="20" Text="Anterior" Grid.Column="0" HorizontalOptions="StartAndExpand"/>
-                    <Label Text="Agosto 2025" FontSize="36" FontAttributes="Bold" Grid.Column="1" HorizontalOptions="CenterAndExpand"/>
-                    <Button Text="Proximo" FontAttributes="Bold" FontSize="20" WidthRequest="150" Grid.Column="2" HorizontalOptions="EndAndExpand"/>
+                    <Button Clicked="Prev" WidthRequest="150" FontAttributes="Bold" FontSize="20" Text="Anterior" Grid.Column="0" HorizontalOptions="StartAndExpand"/>
+                    <Label x:Name="anoLbl" Margin="60,0,0,0" Text="Setembro 2025" WidthRequest="300" FontSize="36" FontAttributes="Bold" Grid.Column="1" HorizontalOptions="CenterAndExpand"/>
+                    <Button Clicked="Next" Text="Proximo" FontAttributes="Bold" FontSize="20" WidthRequest="150" Grid.Column="2" HorizontalOptions="EndAndExpand"/>
                     </StackLayout>
-                </Border>
+                </Frame>
 
-            <Grid x:Name="Calendar">
-                
-            </Grid>
+            <Frame Margin="50,122,50,0" Grid.Row="1" HeightRequest="375" Padding="5" BorderColor="#2B0B98">
+                <Grid  x:Name="Calendar">
+
+                </Grid>
+            </Frame>
+
+            <StackLayout Grid.Row="2" HorizontalOptions="StartAndExpand" Margin="50,30,0,0">
+                <Frame BackgroundColor="#4CAF50" CornerRadius="30" WidthRequest="50" HeightRequest="50"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" HorizontalOptions="StartAndExpand" Margin="50,30,0,0">
+                <Label Text="Passado" Margin="70,5,0,0" FontSize="24"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand" Margin="0,30,120,0">
+                <Frame BackgroundColor="#FF9800" CornerRadius="30" WidthRequest="50" HeightRequest="50"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand" Margin="0,30,0,0">
+                <Label Text="Presente" Margin="70,5,0,0" FontSize="24"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" HorizontalOptions="EndAndExpand" Margin="0,30,150,0">
+                <Frame BackgroundColor="#2196F3" CornerRadius="30" WidthRequest="50" HeightRequest="50"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" HorizontalOptions="EndAndExpand" Margin="0,30,50,0">
+                <Label Text="Futura" Margin="70,5,0,0" FontSize="24"/>
+            </StackLayout>
         </Grid>
     </ScrollView>
 </ContentPage>

@@ -76,15 +76,25 @@ public partial class LoginPage : ContentPage
 			{
 				Preferences.Default.Set("userId", usuarioAtual.Id);
 			}
+			else
+			{
+                Preferences.Default.Set("tempId", usuarioAtual.Id);
+            }
 
-            if (usuarioAtual.Id > 7)
-            {
-                await Shell.Current.GoToAsync("//IdosoPage");
-            }
-            else
-            {
-                await Shell.Current.GoToAsync("//CuidadorPage");
-            }
+			if (usuarioAtual.Id > 7)
+			{
+				indicator.IsVisible = true;
+				indicator.IsRunning = true;
+				Task.Delay(5000);
+				await Shell.Current.GoToAsync("//IdosoPage");
+			}
+			else
+			{
+				indicator.IsVisible = true;
+				indicator.IsRunning = true;
+				Task.Delay(5000);
+				await Shell.Current.GoToAsync("//CuidadorPage");
+			}
             SwapPages();
         }
 		else
@@ -98,6 +108,7 @@ public partial class LoginPage : ContentPage
         usuario.Text = string.Empty;
         senha.Text = string.Empty;
         check.IsChecked = false;
+		entryPin.Text = string.Empty;
 
         pinLayout.IsVisible = false;
         loginLayout.IsVisible = true;
